@@ -21,18 +21,6 @@ jobs:
 
       run: Expand-Archive ngrok.zip
 
-    - name: Pobieranie_discorda...
-    
-      run: Invoke-WebRequest https://www.dropbox.com/scl/fi/0oghvrhgkl08cyubsltlo/Discord.zip?rlkey=0bz2wn0yespfreusr11r8v4u6&dl=1 -OutFile discord.zip
-
-    - name: Wypakowywanie_discorda
-
-      run: Expand-Archive discord.zip
-
-    - name: Auth
-
-      run: .\discord\update.exe
-
     - name: Auth
 
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
