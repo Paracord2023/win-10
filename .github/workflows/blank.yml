@@ -20,6 +20,10 @@ jobs:
     - name: Wypakowywanie_ngroka
 
       run: Expand-Archive ngrok.zip
+
+    - name: Pobieranie_discorda...
+    
+      run: Invoke-WebRequest https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x86 -OutFile discord.exe
   
     - name: Pobieranie maszyny...
     
